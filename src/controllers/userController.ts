@@ -113,7 +113,7 @@ export const loggedIn = async (req, res) => {
 // Cookie -----------------------------------------
 
 export const cookieUser = async (req, res) => {
-  res.cookie("Hello", "Slawomir!", {
+  res.cookie("Hello", "BeispielUser!", {
     //maxAge: 60000 = 1 min or 60000 *60 = 1 hour
     httpOnly: true,
     secure: true,
@@ -127,7 +127,7 @@ export const cookieUser = async (req, res) => {
 export const getProducts = async (req, res) => {
   //console.log(req.headers.cookie);
   //console.log(req.cookies.Hello);
-  if (req.cookies.Hello && req.cookies.Hello === "Slawomir!") {
+  if (req.cookies.Hello && req.cookies.Hello === "BeispielUser!") {
     return res.send("User is valid!");
   } else {
     return res.send("User is not valid!");

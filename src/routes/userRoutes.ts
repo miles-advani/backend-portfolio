@@ -14,7 +14,7 @@ import {
   //   deleteUser,
 } from "../controllers/userController.js";
 // Middleware ---
-import authMiddleware from "../middleware/auth.js"; // Custom middleware
+import authMiddleware from "../middleware/authMiddleware.js"; // Custom middleware
 
 // Routes ==========================================
 
