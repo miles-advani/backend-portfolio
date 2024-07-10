@@ -49,7 +49,7 @@ export const userSignup = async (req, res) => {
     };
 
     //Create a JWT using payload
-    jwt.sign(payload, "randomString", { expiresIn: "1h" }, (err, token) => {
+    jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" }, (err, token) => {
       if (err) throw err;
       res.status(200).json({ token });
     });
@@ -89,7 +89,7 @@ export const userLogin = async (req, res) => {
     };
 
     //Create a JWT using payload
-    jwt.sign(payload, "randomString", { expiresIn: "1h" }, (err, token) => {
+    jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" }, (err, token) => {
       if (err) throw err;
       res.status(200).json({ token });
     });

@@ -49,8 +49,8 @@
 // Optimized middleware to verify token and handle both Google logins and other JWT-based logins
 
 // Imports
-import dotenv from "dotenv";
-dotenv.config();
+// import dotenv from "dotenv";
+// dotenv.config();
 import jwt, { JwtPayload } from "jsonwebtoken";
 
 // Middleware
