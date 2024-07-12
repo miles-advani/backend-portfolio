@@ -11,6 +11,7 @@ import {
 // import { logMiddleware } from "../middleware/logMiddleware.js";
 // import { testMiddleware } from "../middleware/testMiddleware.js";
 // import { dbMiddleware } from "../middleware/dbMiddleware.js";
+import authMiddleware from "../middleware/authMiddleware.js"; // Custom middleware
 
 const router = express.Router();
 
@@ -40,7 +41,7 @@ router.get("/collection", getCollection);
 
 // Create Test Data
 // http://127.0.0.1:5001/test/collection/
-router.post("/collection", postCollection);
+router.post("/collection",authMiddleware, postCollection);
 
 // export router: ========================================
 
